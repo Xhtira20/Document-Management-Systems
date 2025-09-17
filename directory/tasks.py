@@ -132,11 +132,11 @@ def MCP(message,data_file,user,id):
         message_content = data["choices"][0]["message"]["content"]
 
     except (KeyError, IndexError, TypeError) as e:
-        print(f"Malformed LLM response structure: {e}, full response: {data}")
+        logger.exception(f"Malformed LLM response structure: {e}, full response: {data}")
         send_error_message(operation_exist,user.id)
         return 
     if not message_content or not isinstance(message_content, str):
-        print(f"Empty or invalid message content: {message_content}")
+        logger.exception(f"Empty or invalid message content: {message_content}")
         send_error_message(operation_exist,user.id)
         return 
 
