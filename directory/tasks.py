@@ -81,7 +81,7 @@ def MCP(message,data_file,user,id):
 
             },
             data=json.dumps({
-                "model": "deepseek/deepseek-chat-v3-0324:free",
+                "model": "x-ai/grok-4-fast:free",
 
                 "messages": [
                     {
