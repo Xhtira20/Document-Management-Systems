@@ -81,7 +81,7 @@ def MCP(message,data_file,user,id):
 
             },
             data=json.dumps({
-                "model": "x-ai/grok-4-fast:free",
+                "model": "nvidia/nemotron-nano-9b-v2:free",
 
                 "messages": [
                     {
